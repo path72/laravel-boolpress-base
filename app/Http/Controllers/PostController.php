@@ -90,6 +90,10 @@ class PostController extends Controller
     }
 
     /**
+	 * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	 * %            UPDATE             %
+	 * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	 * 
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -98,7 +102,13 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+		$this->validation($request);
+
+		$data = $request->all();
+		$post->update($data);
+
+		@dump('');
+		return redirect()->route('posts.index')->with('status','Post Succesfully Updated');
     }
 
     /**

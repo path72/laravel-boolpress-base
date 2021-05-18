@@ -4,7 +4,7 @@
 main {
 	@include flex-col;
 	.card {
-		@include flex-row;
+		@include flex-row-cv;
 		@include fx-row-between;
 		text-align: left;
 		.actions {
