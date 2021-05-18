@@ -1,3 +1,30 @@
 /**********************************
  * POSTS
  */
+main {
+	@include flex-col;
+	.card {
+		@include flex-row;
+		@include fx-row-between;
+		text-align: left;
+		.actions {
+			@include flex-row;
+			@include fx-row-evenly;
+			a, form {
+				margin: 0 5px;
+			}
+		}
+	}
+	.title_bar {
+		@include flex-col-cc;
+	}
+	.db_columns {
+		@include flex-col-co;
+		.form-control {
+			width: 60vw;
+		}
+		.btn {
+			margin-bottom: 30px;
+		}
+	}
+}

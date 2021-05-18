@@ -4,7 +4,9 @@
 @section('main_content')
 	
 <main>
-	<h4>Home Page</h4>
+	<div class="title_bar">
+		<h4>Home Page</h4>
+	</div>
 </main>
 
 @endsection
