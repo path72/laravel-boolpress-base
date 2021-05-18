@@ -82,4 +82,26 @@ class PostController extends Controller
     {
         //
     }
+
+
+
+
+
+
+	/**
+	 * Data validation
+	 * 
+	 * https://laravel.com/docs/7.x/validation
+	 * errors shown in EDIT/CREATE view
+	 * 
+	 * @param  \Illuminate\Http\Request  $req
+	 */
+	protected function validation($req) {
+		$req->validate([
+			'author'	=> 'required|max:50',
+			'date'		=> 'required|date',
+			'title'		=> 'required|max:100',
+			'text'		=> 'required'
+		]);
+	}
 }
