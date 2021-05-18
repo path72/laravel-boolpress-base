@@ -1,0 +1,58 @@
+/**********************************
+ * COMMON
+ */
+
+// % PROLEGOMENA % 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	// font-family: 'Teko', sans-serif;
+	// font-family: 'Playfair Display', serif;
+	// font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+	background-color: $white;
+	color: $black;
+}
+a {
+	text-decoration: none;
+	color: $black;
+}
+ul {
+	list-style: none;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 15px 15px 30px;
+	padding: 30px 50px;
+	color: var(--black);
+	border-radius: 5px;
+	background-color: var(--realwhite);
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.navbar {
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+main {
+	@include flex-col-co;
+}
+
+// % HEADER % 
+
+
+// % FOOTER % 
+
+
+// % TEXTS % 
+.txt_product_grid {
+	// font-family: 'Playfair Display', serif;
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 400;
+}
+
