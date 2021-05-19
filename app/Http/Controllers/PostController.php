@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post; // ! Post Model in use here ! //
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class PostController extends Controller
 {
@@ -48,8 +49,8 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+		$this->addDateNow($request);
 		$this->validation($request);
-
 		$data = $request->all();
 		$new_post = new Post();
 		$new_post->fill($data);
@@ -102,8 +103,8 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+		$this->addDateNow($request);
 		$this->validation($request);
-
 		$data = $request->all();
 		$post->update($data);
 
@@ -127,10 +128,17 @@ class PostController extends Controller
 		return redirect()->route('posts.index')->with('status','Post Succesfully Deleted');
     }
 
-
-
-
-
+	/**
+	 * Add Post Date = Time of STORE/UPDATE
+	 *  
+	 * @param  \Illuminate\Http\Request  $req
+	 */
+	protected function addDateNow($req) {
+		$now = Carbon::now('Europe/Paris')->toDateTimeString();
+		$req->merge([
+			'date' => $now
+		]);
+	}
 
 	/**
 	 * Data validation

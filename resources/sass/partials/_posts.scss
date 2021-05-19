@@ -3,20 +3,29 @@
  */
 main {
 	@include flex-col;
-	.card {
+	.title_bar {
+		@include flex-col-cc;
+		a {
+			margin-bottom: 10px;
+		}
+		.alert {
+			margin-top: 20px;
+		}
+	}
+	.post_item {
 		@include flex-row-cv;
 		@include fx-row-between;
-		text-align: left;
-		.actions {
+		.post_actions {
 			@include flex-row;
-			@include fx-row-evenly;
 			a, form {
 				margin: 0 5px;
 			}
-		}
+		}	
 	}
-	.title_bar {
-		@include flex-col-cc;
+	.post_show {
+		.post_body {
+			margin-top: 30px;
+		}	
 	}
 	.db_columns {
 		@include flex-col-co;

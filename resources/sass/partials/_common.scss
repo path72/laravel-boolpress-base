@@ -10,10 +10,7 @@
 }
 body {
 	font-family: 'Open Sans', sans-serif;
-	// font-family: 'Teko', sans-serif;
-	// font-family: 'Playfair Display', serif;
-	// font-family: 'Raleway', sans-serif;
-	font-size: 14px;
+	font-size: 13px;
 	background-color: $white;
 	color: $black;
 }
@@ -25,8 +22,8 @@ ul {
 	list-style: none;
 }
 .card {
-	margin: 15px 15px 30px;
-	padding: 30px 50px;
+	margin: 5px 50px 5px;
+	padding: 20px;
 	color: $black;
 	border-radius: 5px;
 	background-color: $realwhite;
@@ -41,13 +38,19 @@ ul {
 
 
 // % FOOTER % 
-
-
-// % TEXTS % 
-.txt_product_grid {
-	// font-family: 'Playfair Display', serif;
-	font-size: 22px;
-	line-height: 24px;
-	font-weight: 400;
+footer {
+	margin-top: 50px;
 }
 
+// % TEXTS % 
+.txt_title {
+	font-size: 1.2em;
+	line-height: 2em;
+	font-weight: 500;
+}
+.txt_subtitle {
+	font-size: 0.9em;
+	// line-height: 2em;
+	font-weight: 300;
+	font-style: italic;
+}

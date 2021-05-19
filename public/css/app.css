@@ -15,7 +15,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 13px;
   background-color: #eaeaea;
   color: #3c3c3c;
 }
@@ -30,8 +30,8 @@ ul {
 }
 
 .card {
-  margin: 15px 15px 30px;
-  padding: 30px 50px;
+  margin: 5px 50px 5px;
+  padding: 20px;
   color: #3c3c3c;
   border-radius: 5px;
   background-color: #fafafa;
@@ -42,10 +42,20 @@ ul {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.txt_product_grid {
-  font-size: 22px;
-  line-height: 24px;
-  font-weight: 400;
+footer {
+  margin-top: 50px;
+}
+
+.txt_title {
+  font-size: 1.2em;
+  line-height: 2em;
+  font-weight: 500;
+}
+
+.txt_subtitle {
+  font-size: 0.9em;
+  font-weight: 300;
+  font-style: italic;
 }
 
 /**********************************
@@ -58,24 +68,31 @@ main {
   display: flex;
   flex-direction: column;
 }
-main .card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: left;
-}
-main .card .actions {
-  display: flex;
-  justify-content: space-evenly;
-}
-main .card .actions a, main .card .actions form {
-  margin: 0 5px;
-}
 main .title_bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+main .title_bar a {
+  margin-bottom: 10px;
+}
+main .title_bar .alert {
+  margin-top: 20px;
+}
+main .post_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .post_item .post_actions {
+  display: flex;
+}
+main .post_item .post_actions a, main .post_item .post_actions form {
+  margin: 0 5px;
+}
+main .post_show .post_body {
+  margin-top: 30px;
 }
 main .db_columns {
   display: flex;
